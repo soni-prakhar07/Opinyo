@@ -8,14 +8,24 @@ export default function Home() {
         style={{ backgroundColor: "#FFF0D1", height: "100vh" }}
       >
         <div
-          className="jumbotron mx-3 my-5 text-center"
+          className="jumbotron mx-3 my-3 text-center"
           style={{ width: "50vw" }}
         >
-          <h1 className="display-4 pacifico-regular">
+          <h1
+            className="display-4 pacifico-regular"
+            style={{ fontSize: "70px" }}
+          >
+            <br />
             Welcome to Opinyo, <br />
             Your Review Hub!
           </h1>
-          <p className="lead">
+          <p
+            className="lead josefin-sans-reg my-3"
+            style={{
+              width: "70%",
+              margin: "auto",
+            }}
+          >
             Explore real experiences from real people. Share your opinions,
             discover ratings, and make smarter choices for the products that
             matter to you.
@@ -26,8 +36,14 @@ export default function Home() {
             difference!
           </p>
           <p className="lead">
-            <a className="btn btn-success btn-lg" href="#" role="button">
-              Get Started
+            <a className="btn btn-success btn-lg mx-3" href="#" role="button">
+              <i class="fa-brands fa-instagram"> Instagram</i>
+            </a>
+            <a className="btn btn-success btn-lg mx-3" href="#" role="button">
+              <i class="fa-brands fa-discord"> Discord</i>
+            </a>
+            <a className="btn btn-success btn-lg mx-3" href="#" role="button">
+              <i class="fa-brands fa-facebook"> Facebook</i>
             </a>
           </p>
         </div>
