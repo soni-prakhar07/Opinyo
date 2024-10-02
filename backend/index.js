@@ -11,6 +11,16 @@ const app = express();
 
 dotenv.config();
 
+// CORS (for frontend requests)
+app.use(
+  cors({
+    origin: "https://opinyo.onrender.com",
+    credentials: true,
+  })
+);
+
+app.use(express.json());
+
 const store = new MongoDBStore({
   uri: process.env.MONGO_URI,
   collection: "sessions",
@@ -30,16 +40,6 @@ app.use(
     },
   })
 );
-
-// CORS (for frontend requests)
-app.use(
-  cors({
-    origin: "https://opinyo.onrender.com",
-    credentials: true,
-  })
-);
-
-app.use(express.json());
 
 // Authentication routes (e.g., login, signup)
 app.use("/api", authRoutes);
