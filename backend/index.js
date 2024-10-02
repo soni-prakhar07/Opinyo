@@ -19,14 +19,12 @@ const store = new MongoDBStore({
 // Session configuration
 app.use(
   session({
-    secret:
-      process.env.SESSION_SECRET ||
-      "2b8bce48f7f4b27d2a84fe9e45f9f8a2b1c6e34fa97301798b1e0e1e7c7b8bc5f",
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
     store: store,
     cookie: {
-      secure: false,
+      secure: true,
       maxAge: 1000 * 60 * 60,
     },
   })
