@@ -42,7 +42,7 @@ router.get("/", async (req, res) => {
 
 // GET route to retrieve feedback for the logged-in user
 router.get("/my-feedbacks", async (req, res) => {
-  console.log(req.session);
+  console.log(req.session.userId);
   try {
     const feedbacks = await Feedback.find({ userId: req.session.userId });
     res.json(feedbacks);
