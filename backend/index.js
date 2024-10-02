@@ -48,6 +48,10 @@ app.use("/api", authRoutes);
 // Feedback routes
 app.use("/api/feedback", feedbackRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the backend API");
+});
+
 // Connect to MongoDB
 mongoose
   .connect(process.env.MONGO_URI, {
