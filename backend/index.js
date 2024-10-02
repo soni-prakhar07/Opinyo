@@ -35,7 +35,7 @@ app.use(
 // CORS (for frontend requests)
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://opinyo.onrender.com",
     credentials: true,
   })
 );

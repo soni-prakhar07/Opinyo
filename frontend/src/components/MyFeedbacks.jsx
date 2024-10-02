@@ -8,7 +8,7 @@ export default function MyFeedbacks(props) {
     const fetchFeedbacks = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/feedback/my-feedbacks",
+          "https://opinyo.vercel.app/api/feedback/my-feedbacks",
           {
             method: "GET",
             credentials: "include",

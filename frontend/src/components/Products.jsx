@@ -37,7 +37,7 @@ export default function Products(props) {
     console.log("Submitting Feedback:", feedbackData);
 
     try {
-      const response = await fetch("http://localhost:5000/api/feedback", {
+      const response = await fetch("https://opinyo.vercel.app/api/feedback", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(feedbackData),
