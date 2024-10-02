@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <>
       <nav className="navbar navbar-dark navbar-expand-lg bg-dark text-light ">
@@ -30,49 +30,24 @@ export default function Navbar() {
           >
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/">
-                  My Feedbacks
-                </a>
-              </li>
-
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="/"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+                <button
+                  className="nav-link active"
+                  aria-current="page"
+                  onClick={props.onHome}
                 >
-                  Products
-                </a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Action
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Something else here
-                    </a>
-                  </li>
-                </ul>
+                  Home
+                </button>
+              </li>
+              <li className="nav-item">
+                <button className="nav-link" onClick={props.onFeedbacks}>
+                  My Feedbacks
+                </button>
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="/">
-                  Logout
-                </a>
+                <button className="nav-link" onClick={props.onProducts}>
+                  Products
+                </button>
               </li>
             </ul>
           </div>
