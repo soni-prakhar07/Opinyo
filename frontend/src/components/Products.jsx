@@ -41,6 +41,7 @@ export default function Products(props) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(feedbackData),
+        credentials: "include",
       });
 
       if (!response.ok) throw new Error("Feedback submission failed");

@@ -27,7 +27,6 @@ export default function MyFeedbacks(props) {
       } catch (error) {
         console.error("Error fetching feedbacks:", error);
         setError(error.message);
-      } finally {
       }
     };
 
